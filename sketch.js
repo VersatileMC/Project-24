@@ -57,14 +57,16 @@ function draw() {
 
   paperBall.display();
 
-	if (keyCode === UP_ARROW) {
-
-		Matter.Body.applyForce(paperBall.body.position,{x:85,y:-85});
-
-	}
+	
 
 
 }
 
+function keyPressed() {
+if (keyCode === UP_ARROW) {
 
+		Matter.Body.applyForce(paperBall.body,paperBall.body.position,{x:15,y:-15});
+
+	}	
+}
 
